@@ -46,9 +46,17 @@ export class BoardComponent {
     for (let line of lines) {
       const [a, b, c] = line;
       if (this.squares[a] && this.squares[a] === this.squares[b] && this.squares[a] === this.squares[c]) {
+        this.highlightWinningSquares(line);  // Call this function to highlight winning squares
         return this.squares[a];
       }
     }
     return null;
+  }
+
+  highlightWinningSquares(line: number[]) {
+    line.forEach(index => {
+      const squareElement = document.querySelectorAll('app-square button')[index];
+      squareElement?.classList.add('winner');
+    });
   }
 }

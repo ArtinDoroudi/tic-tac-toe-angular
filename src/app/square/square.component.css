@@ -1,0 +1,6 @@
+button.winner {
+  background-color: #ffeb3b; /* Bright yellow for the winner */
+  color: #333;
+  transform: scale(1.2); /* Slightly bigger */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}

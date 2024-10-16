@@ -4,5 +4,5 @@
               (click)="makeMove(i)">
   </app-square>
 </div>
-<button (click)="resetGame()">Reset Game</button>
+<button class="reset-btn" (click)="resetGame()">Reset Game</button>
 <h2 *ngIf="winner">{{ winner }} wins!</h2>
