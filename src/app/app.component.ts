@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { BoardComponent } from './board/board.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
+  standalone: true,  // Mark the component as standalone
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [CommonModule, BoardComponent]  // Import the BoardComponent and CommonModule
 })
 export class AppComponent {
   title = 'tic-tac-toe';
